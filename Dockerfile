@@ -28,6 +28,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   apt-get -y clean
 
 COPY etc/skel/.xinitrc /etc/skel/.xinitrc
+COPY start.sh /start.sh
 
 RUN useradd -m -s /bin/bash user
 USER user
