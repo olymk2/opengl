@@ -1,0 +1,22 @@
+#+TITLE: OpenGL Container setup for software OpenGL rendering
+
+This container currently only supports OpenGL 3.3, it uses llvmpipe so is limited by the functionality of this software.
+
+See https://mesamatrix.net/ for drivers and support, hopefully we will see version 4 support sometime soon.
+
+Based on another image by thewtex https://github.com/thewtex/docker-opengl but adjusted for CI usage.
+
+To build the container locally use the command below in the repository.
+#+BEGIN_SRC bash
+docker build -t olymk2/opengl .
+#+END_SRC
+
+#+RESULTS:
+
+To launch the container use something similar to this. 
+#+BEGIN_SRC 
+docker run -it -v /full/path/repos/hgl:/app --entrypoint=/bin/bash olymk2/opengl
+#+END_SRC
+
+For an example see olymk2/hgl which uses drone CI to run tests using this on a server with out dedicated hardware.
+
