@@ -1,5 +1,6 @@
 FROM ubuntu:latest 
-MAINTAINER Matt McCormick <matt.mccormick@kitware.com>
+MAINTAINER Oliver Makrs <oly@digitaloctave.com>
+
 ENV DISPLAY :0
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
